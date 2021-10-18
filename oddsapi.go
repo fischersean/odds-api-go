@@ -10,8 +10,8 @@ import (
 )
 
 const (
-	ODDS_API_HOST   = "api.the-odds-api.com"
-	SPORTS_ENDPOINT = "/v4/sports"
+	oddsApiHost    = "api.the-odds-api.com"
+	sportsEndpoint = "/v4/sports"
 )
 
 type Client struct {
@@ -72,9 +72,9 @@ func (c *Client) GetSports(input GetSportsInput) (sports []Sport, err error) {
 
 	client := &http.Client{}
 	u := &url.URL{
-		Host:   ODDS_API_HOST,
+		Host:   oddsApiHost,
 		Scheme: "https",
-		Path:   fmt.Sprintf("%s/", SPORTS_ENDPOINT),
+		Path:   fmt.Sprintf("%s/", sportsEndpoint),
 	}
 
 	v := url.Values{}
@@ -127,9 +127,9 @@ func (c *Client) GetEvents(input GetEventsInput) (evs []Event, err error) {
 
 	for _, s := range input.Sports {
 		u := &url.URL{
-			Host:   ODDS_API_HOST,
+			Host:   oddsApiHost,
 			Scheme: "https",
-			Path:   fmt.Sprintf("%s/%s/odds", SPORTS_ENDPOINT, s),
+			Path:   fmt.Sprintf("%s/%s/odds", sportsEndpoint, s),
 		}
 
 		u.RawQuery = v.Encode()
