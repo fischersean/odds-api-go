@@ -1,7 +1,7 @@
 # odds-api-go 
 [![Go Reference](https://pkg.go.dev/badge/github.com/fischersean/odds-api-go.svg)](https://pkg.go.dev/github.com/fischersean/odds-api-go)
 
-Unofficial Go client library for [the-odds-api] (https://the-odds-api.com).
+Unofficial Go client library for [the-odds-api](https://the-odds-api.com).
 
 ## Install
 ```go
