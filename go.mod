@@ -1,4 +1,4 @@
-module github.com/fischersean/go-odds-api
+module github.com/fischersean/odds-api-go
 
 go 1.16
 
