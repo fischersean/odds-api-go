@@ -131,9 +131,10 @@ func TestGetEvents(t *testing.T) {
 	c := NewClient(key)
 
 	s, err := c.GetEvents(GetEventsInput{
-		Sports:  []string{"americanfootball_nfl"},
-		Regions: []RegionType{RegionUS},
-		Markets: []MarketType{MarketMoneyline},
+		Sports:     []string{"americanfootball_nfl"},
+		Regions:    []RegionType{RegionUS},
+		Markets:    []MarketType{MarketMoneyline},
+		OddsFormat: OddsFormatDecimal,
 	})
 	if err != nil {
 		t.Error(err.Error())

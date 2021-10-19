@@ -1,10 +1,14 @@
 package oddsapi
 
+import (
+	"time"
+)
+
 type Event struct {
 	Id           string      `json:"id"`
 	SportKey     string      `json:"sport_key"`
 	SportTitle   string      `json:"sport_title"`
-	CommenceTime string      `json:"commence_time"`
+	CommenceTime time.Time   `json:"commence_time"`
 	HomeTeam     string      `json:"home_team"`
 	AwayTeam     string      `json:"away_team"`
 	Bookmakers   []Bookmaker `json:"bookmakers"`
