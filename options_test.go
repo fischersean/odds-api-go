@@ -37,15 +37,6 @@ func TestMarketTypes(t *testing.T) {
 	}
 }
 
-func TestDateFormatTypes(t *testing.T) {
-	if DateFormatISO.String() != "iso" {
-		t.Error("ISO date format string does not match expected value")
-	}
-	if DateFormatUnix.String() != "unix" {
-		t.Error("Unix date format string does not match expected value")
-	}
-}
-
 func TestOddsFormateTypes(t *testing.T) {
 	if OddsFormatAmerican.String() != "american" {
 		t.Error("American odds format string does not match expected value")

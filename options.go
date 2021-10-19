@@ -27,24 +27,13 @@ func (m MarketType) String() string {
 	return []string{"h2h", "h2h_lay", "spreads", "total", "outrights"}[m]
 }
 
-type DateFormatType int
-
-const (
-	DateFormatISO DateFormatType = iota
-	DateFormatUnix
-)
-
-func (df DateFormatType) String() string {
-	return []string{"iso", "unix"}[df]
-}
-
 type OddsFormatType int
 
 const (
-	OddsFormatAmerican OddsFormatType = iota
-	OddsFormatDecimal
+	OddsFormatDecimal OddsFormatType = iota
+	OddsFormatAmerican
 )
 
 func (fo OddsFormatType) String() string {
-	return []string{"american", "decimal"}[fo]
+	return []string{"decimal", "american"}[fo]
 }

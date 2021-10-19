@@ -31,9 +31,10 @@ type GetSportsInput struct {
 }
 
 type GetEventsInput struct {
-	Sports  []string
-	Regions []RegionType
-	Markets []MarketType
+	Sports     []string
+	Regions    []RegionType
+	Markets    []MarketType
+	OddsFormat OddsFormatType
 }
 
 func (c *Client) updateRequestStats(resp *http.Response) {
@@ -124,6 +125,9 @@ func (c *Client) GetEvents(input GetEventsInput) (evs []Event, err error) {
 		v.Add("markets", m.String())
 
 	}
+
+	// odds format
+	v.Add("oddsFormat", input.OddsFormat.String())
 
 	for _, s := range input.Sports {
 		u := &url.URL{
