@@ -1,3 +1,5 @@
+*This project has migrated to [sourcehut](https://git.sr.ht/~swf/odds-api-go)*
+
 # odds-api-go 
 [![Go Reference](https://pkg.go.dev/badge/github.com/fischersean/odds-api-go.svg)](https://pkg.go.dev/github.com/fischersean/odds-api-go)
 
